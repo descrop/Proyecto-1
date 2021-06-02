@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+a{
+    display: inline-block;
+}
+p{
+    color: black;
+}
+
+header{
+    
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #f0f0f0;
+    width: 100%;
+
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo{
+    width: 50%;
+   
+}
+
+header .container nav a{
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  border: 1px solid;
+  background-color: rgb(83, 183, 74);
+}
+
+.boton{
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.boton.boton-rojo{
+    color: white;
+    background-color: rgb(83, 183, 74);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.boton.boton-verde{
+    color: white;
+    background-color: rgb(83, 183, 74);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.boton.boton-negro{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.boton.boton-blanco{
+    color: red;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid red;
+}
+
+
+.seccion{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.cuadrado-perfecto{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.cuadrado-perfecto img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto 0 auto;
+    padding-right: 15px ;
+    padding-left: 15px;
+    position: relative;
+   
+}
+
+.container-fluid{
+    width: 100%;
+    padding-right: 15px ;
+    padding-left: 15px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.columna{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.columna-33{
+    width: 33.33%;
+}
+
+.columna-41{
+    width: 41.66%;
+}
+
+.columna-50{
+    width: 50%;
+}
+
+.empujar-50{
+    margin-left: 50%;
+}
+
+.empujar-58{
+    margin-left: 58.33%;
+}
+.empujar-0{
+    margin-left: 0;
+}
+
+.conta{
+    color: white;
+}
+#inicio{
+    position: relative;
+
+}
+
+#inicio img{
+    width: 100%;
+    display: block;
+}
+
+#inicio .bloque-inicio{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 600px;
+    text-align: center;
+    margin-left: -300px;
+}
+
+#inicio .bloque-inicio h1{
+    color: #f0f0f0;
+    font-size: 36px;
+    font-weight: 700;
+    
+    
+}
+
+#inicio .bloque-inicio p{
+    color:black;
+    font-size: 16px;
+    
+   
+}
+
+#nosotros{
+    background-image: url(https://avitsol.com/wp-content/uploads/2021/05/bg-educavit-e1622500708976.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+#nosotros p{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    /*margin: 0;*/
+}
+
+#servicios .bloque-servicio{
+
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#servicios .boque-servicio .bloque-img-servicio{
+
+}
+
+#servicios .bloque-servicio .bloque-img-servicio img{
+    width: 100%;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto{
+    padding-bottom: 56.25%;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio{
+    padding: 15px;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio h3{
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+#galeria{
+
+}
+
+#galeria h4{
+    padding-right: 15px;
+    padding-left: 15px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+}
+
+#galeria img{
+    filter: grayscale(1);
+}
+
+#galeria .cuadrado-perfecto:hover img{
+    filter: none;
+    cursor: pointer;
+}
+
+#galeria .cuadrado-perfecto:hover h4{
+    display: none;
+    cursor: pointer;
+}
+
+#contactenos{
+    position: relative;
+}
+
+#contactenos iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+
+#contactenos form{
+
+   padding: 60px;
+   background-color: rgb(83, 183, 74);
+}
+
+#contactenos form .form-block{
+    
+    width: 100%;
+    margin-bottom: 15px;
+ }
+
+ #contactenos form .form-block .form-control{
+    display: block;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid gray;
+    width: 100%;
+    padding: 5px 10px;
+ }
+
+ #contactenos form .form-block textarea{
+    display: block;
+    height: 100px;
+    font-size: 16px;
+    border: 1px solid gray;
+    width: 100%;
+    padding: 5px 10px;
+ }
+
+ #contactenos form .form-block.bloque-ultimo{
+    margin-bottom: 0;
+ }
+
+ #contactenos form .form-block.bloque-ultimo .boton:hover{
+   cursor: pointer;
+   background-color: white;
+   color: black;
+ }
