@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name="description" content="Web E-ducavit proyecto para Avit Soluciones">
-    <meta name="Keywords" content="Escuela, Aulas, Hibridas, Clases a distancia, Educavit, E-ducavit">
+    <meta name="Keywords" content="Escuela, Aulas, Hibridas, Clases a distancia">
     <title>Inicio - E-ducavit</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" href="https://educavit.com.mx/aulas-hibridas/assets/img/logo-white.png">
@@ -175,7 +175,7 @@
                                 <p>Lleva el pizarrón a la pantalla de tus alumnos.
                                     Optimizado para la creación de clases en línea, el Smart Class Kit te permite crear fácilmente videos educativos y explicativos con tu teléfono o laptop.
                                 </p>
-                                <a href="https://educavit.com.mx/smart-class-kit/" class="boton boton-rojo">Ver más</a>
+                                <a href="#" class="boton boton-rojo">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                                     Silenciar, Iniciar / Detener video, Captura de pantalla y más,
                                     para que pueda ejecutar Zoom con solo hacer clic en el botón.
                                 </p>
-                                <a href="https://educavit.com.mx/zapp-pad/" class="boton boton-rojo">Ver más</a>
+                                <a href="#" class="boton boton-rojo">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -269,7 +269,7 @@
             <div class="container container-fluid">
                 <div class="row">
                     <div class="columna columna-41 columna-mobile-100 empujar-58 empujar-mobile-0 sinpadding-mobile">
-                        <form action="index.html" id="contact_form_submit" method="POST">
+                        <form action="index.php"  method="post">
                             <h2 class="conta">Contactanos</h2>
                             <div class="form-block">
                                 <input type="text" name="nombre" id="name"
@@ -284,6 +284,36 @@
                             </div>
                             <div class="form-block bloque-ultimo">
                                <input type="submit" class="boton boton-negro" value="Enviar">
+                               <?php 
+                               if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+                                $nombre = $_POST["nombre"];
+                                $email = $_POST["email"];
+                                $mensaje = $_POST["mensaje"];
+
+                                if(isset($nombre)){
+                                    if(isset($email)){
+                                        if(isset($mensaje)){
+
+                                            $para = "francisco.calymayor@avitsol.com";
+                                            $asunto = "Esto es una porueba";
+                                            $cuerpo = $nombre."\n".$email."\n".$mensaje."\n";
+                                            $adicional = "From: Noreply@francisco.com";
+
+                                            mail($para,$asunto,$cuerpo,$adicional);
+                                            
+											echo"<div style='background-color:#38d430; font-size:1.5em; color: white; font-weight:bold; padding:5px;'>Gracias por tu tiempo. Nos pondremos en contacto contigo a la brevedad.</div><p>&nbsp;</p>";
+                                         ?>
+	
+                                        <?php
+                                      
+                                        }
+                                    }
+                                }
+
+                               }
+                              
+                               ?>
                             </div>
                             </div>
                         </form>
